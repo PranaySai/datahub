@@ -62,7 +62,6 @@ services:
     container_name: datahub-gms
     depends_on:
     - mysql
-    platform: linux/x86_64
     environment:
     - DATASET_ENABLE_SCSI=false
     - EBEAN_DATASOURCE_USERNAME=datahub
@@ -137,6 +136,7 @@ services:
     - MYSQL_PASSWORD=datahub
     - MYSQL_ROOT_PASSWORD=datahub
     hostname: mysql
+    platform: linux/x86_64
     image: mysql:5.7
     ports:
     - 3306:3306
